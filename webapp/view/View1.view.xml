@@ -1,0 +1,26 @@
+<mvc:View controllerName="assignment2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Panel backgroundDesign="Translucent">
+    	<List
+		showSeparators="Inner"
+		items="{/results}"  id="list">
+		<FeedListItem
+			sender="{username}"
+			timestamp="{date}"
+            text="{text}"
+			iconDensityAware="false"
+			convertLinksToAnchorTags="All"
+            type="Navigation"
+            press="onLineItemPress" />
+	</List>
+
+        	<Label class="sapUiSmallMarginTop sapUiTinyMarginBottom" id="label"/>
+	<FeedInput
+		post="onPost"
+		showIcon="true" 
+		id="inputValue"/>
+			</Panel>
+    </Page>
+</mvc:View>
